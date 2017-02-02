@@ -1,0 +1,15 @@
+all: aws.c serverA.c serverB.c serverC.c client.c
+	gcc aws.c -o aws_hh -lsocket -lnsl -lresolv
+	gcc serverA.c -o serverA_a -lsocket -lnsl -lresolv
+	gcc serverB.c -o serverB_b -lsocket -lnsl -lresolv
+	gcc serverC.c -o serverC_c -lsocket -lnsl -lresolv
+	gcc client.c -o client -lsocket -lnsl -lresolv
+
+aws:
+	./aws_hh
+serverA:
+	./serverA_a
+serverB:
+	./serverB_b
+serverC:
+	./serverC_c
